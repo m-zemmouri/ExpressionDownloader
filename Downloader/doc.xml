@@ -1,0 +1,1607 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZEMMOURI Downloader</name>
+    </assembly>
+    <members>
+        <member name="T:ZEMMOURI_Downloader.Downloader.Downloader">
+            <summary>
+            Describes a downloader by :    
+             - downloader     
+             - Downloader State    
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.#ctor(System.UInt32)">
+            <summary>
+            Constructor of Downloader
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader.iD">
+            <summary>
+            Downloader ID
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader.client">
+            <summary>
+            The File's downloader
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader.state">
+            <summary>
+            The downloader state
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader.fileState">
+            <summary>
+            File ID
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader.ID">
+            <summary>
+            Downloader ID
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader.Client">
+            <summary>
+            The downloader
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader.State">
+            <summary>
+            The downloader state
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader.FileState">
+            <summary>
+            FileState
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.Prepare(ZEMMOURI_Downloader.File_State.FileState)">
+            <summary>
+            Prepare the Download of a file
+            </summary>
+            <param name="fileState">a FileState to Download</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.Download(ZEMMOURI_Downloader.File_State.FileState)">
+            <summary>
+            Start the Download of a file
+            </summary>
+            <param name="fileState">a FileState to Download</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.Complete(ZEMMOURI_Downloader.File_State.FileState)">
+            <summary>
+            Complete the Download of a file
+            </summary>
+            <param name="fileState">a FileState Downloaded</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.Pause">
+            <summary>
+            Pause the download
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.Stop">
+            <summary>
+            Stop the download
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)">
+            <summary>
+            the handler for ProgressChanged event.
+            </summary>
+            <param name="sender">The Sender</param>
+            <param name="e">The Event</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader.DownloadCompletedCallback(System.Object,System.ComponentModel.AsyncCompletedEventArgs)">
+            <summary>
+            the handler for CompletedCallback event.
+            </summary>
+            <param name="sender">The Sender</param>
+            <param name="e">The Event</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.#ctor">
+            <summary>
+            Constructor of DownloaderPart
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.request">
+            <summary>
+            The Web Request
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.response">
+            <summary>
+             The Web Response
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.path">
+            <summary>
+            The Path of the File Part
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.Request">
+            <summary>
+             The Web Request
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.Response">
+            <summary>
+            The Web Response
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.Downloader_Part.DownloaderPart.Path">
+            <summary>
+            The Path of the File Part
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Downloader.ListDownloader">
+            <summary>
+            Describes a List of Files to Download, it is a List of FileState
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.#ctor">
+            <summary>
+            Constructor of ListDownloaders
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.#ctor(System.Decimal,ZEMMOURI_Downloader.File_State.ListFileState)">
+            <summary>
+            Constructor of ListDownloaders
+            </summary>
+            <param name="MaxSimetaneouseDownloads">The Max Number of Simetaneouse downloads</param>
+            <param name="ListFilesState">List of Files State.</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ListDownloader.items">
+            <summary>
+            List of Downloader
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ListDownloader.maxDownloads">
+            <summary>
+            The Max Number of Simetaneouse downloads
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ListDownloader.listFiles">
+            <summary>
+            List of Files State.
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ListDownloader.CurrentID">
+            <summary>
+            Counter to set the ID for Downloaders
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ListDownloader.Items">
+            <summary>
+            List of Downloaders
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ListDownloader.MaxDownloads">
+            <summary>
+            The Max Number of Simetaneouse downloads
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ListDownloader.ListFiles">
+            <summary>
+            List of Files State.
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ListDownloader.Item(System.Int32)">
+            <summary>
+            Indexor of Downloaders
+            </summary>
+            <param name="i">Item Ranke</param>
+            <returns>Downloader</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.GetReadyDownloader">
+            <summary>
+            Get a Ready Downloader
+            </summary>
+            <returns>a Ready Downloader</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.GetDownloader(System.UInt32)">
+            <summary>
+            Get a the Downloader by his ID
+            </summary>
+            <param name="DownloaderID">Downloader's ID</param>
+            <returns>a Downloader</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.ResizeList">
+            <summary>
+            Resize the List of Downloaders
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.AddNewDownloader">
+            <summary>
+            Add a New Downloader to the List
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.DownloadNext">
+            <summary>
+            Download the Next File
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.Dispose">
+            <summary>
+            Dispose the Object
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.StopAll">
+            <summary>
+            Stop All Downloads
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.Stop(System.UInt32)">
+            <summary>
+            Stop One Download
+            </summary>
+            <param name="DownloaderID">Downloader's ID</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.StopFile(System.UInt32)">
+            <summary>
+            Stop the Download of a file
+            </summary>
+            <param name="FileID">File's ID</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.PauseAll">
+            <summary>
+            Pause All Downloads
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.Pause(System.UInt32)">
+            <summary>
+            Pause One Download
+            </summary>
+            <param name="DownloaderID"></param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.WriteToXML(ZEMMOURI_Downloader.Downloader.ListDownloader,System.String)">
+            <summary>
+            Export a List of FileState To an XML File
+            </summary>
+            <param name="list">List of FileState</param>
+            <param name="XMLFileName">The path of the Destination XML File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ListDownloader.ReadFromXML(System.String)">
+            <summary>
+            Import a List of FileState from an XML File
+            </summary>
+            <param name="XMLFileName">The path of the XML File</param>
+            <returns>ListDownloaders</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Downloader.ConnexionParameter">
+            <summary>
+            The Connexion Parameter
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ConnexionParameter.#ctor">
+            <summary>
+            Constructor of ConnexionParameter
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Downloader.ConnexionParameter.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor of ConnexionParameter
+            </summary>
+            <param name="User">The user name</param>
+            <param name="Pwd">The PassWord</param>
+            <param name="ProxyURI">The URI of the proxy server.</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ConnexionParameter.user">
+            <summary>
+            The user name
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ConnexionParameter.passWord">
+            <summary>
+            The PassWord
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.ConnexionParameter.proxy">
+            <summary>
+            The URI of the proxy server.
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ConnexionParameter.User">
+            <summary>
+            The user name
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ConnexionParameter.PassWord">
+            <summary>
+            The PassWord
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Downloader.ConnexionParameter.Proxy">
+            <summary>
+            The URI of the proxy server.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Downloader.DownloaderState">
+            <summary>
+            Download State (Ready, Busy, Paused)
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.DownloaderState.Ready">
+            <summary>
+            Ready
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.DownloaderState.Busy">
+            <summary>
+            Busy
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Downloader.DownloaderState.Paused">
+            <summary>
+            Paused
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_State.DownloadState">
+            <summary>
+            Download State (ready, Downloading, Ok, Error, Stoped)
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Ready">
+            <summary>
+            Ready
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Downloading">
+            <summary>
+            Downloading
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Stoped">
+            <summary>
+            Stoped by user
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Paused">
+            <summary>
+            Paused by user
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Error">
+            <summary>
+            Finished with Error
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Aborted">
+            <summary>
+            Finished with Error and Aborted
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.DownloadState.Ok">
+            <summary>
+            Ok, Finished
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart">
+            <summary>
+            Describes a List of Files to Download, it is a List of FilePart
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.#ctor">
+            <summary>
+            Constructor of ListFilePart
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.items">
+            <summary>
+            List of FilePart
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.CurrentID">
+            <summary>
+            Counter to set the ID for Files
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.Items">
+            <summary>
+            List of FilePart
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.Item(System.Int32)">
+            <summary>
+            Indexor of ListFilePart
+            </summary>
+            <param name="i">Item Ranke</param>
+            <returns>FilePart</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.Add(System.Int32,System.Int32)">
+            <summary>
+            Add FilePart to the list
+            </summary>
+            <param name="StartPosition">The position of the begging of the Part in the File</param>
+            <param name="EndPosition">The position of the end of the Part in the File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.WriteToXML(ZEMMOURI_Downloader.File_State.File_Part.ListFilePart,System.String)">
+            <summary>
+            Export a List of FilePart To an XML File
+            </summary>
+            <param name="list">List of FilePart</param>
+            <param name="XMLFileName">The path of the Destination XML File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.ListFilePart.ReadFromXML(System.String)">
+            <summary>
+            Import a List of FilePart from an XML File
+            </summary>
+            <param name="XMLFileName">The path of the XML File</param>
+            <returns>ListFilePart</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_State.File_Part.FilePart">
+            <summary>
+            A Part of File.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.FilePart.#ctor">
+            <summary>
+            Constructor of FilePart
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.FilePart.#ctor(System.UInt32,System.Int32,System.Int32)">
+            <summary>
+            Constructor of FilePart
+            </summary>
+            <param name="Range">The Range Part in the File</param>
+            <param name="StartPosition">The position of the begging of the Part in the File</param>
+            <param name="EndPosition">The position of the end of the Part in the File</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.FilePart.range">
+            <summary>
+            Range Part
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.FilePart.startPosition">
+            <summary>
+            The position of the begging of the Part in the File
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.FilePart.endPosition">
+            <summary>
+            current endPosition of download
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.File_Part.FilePart.currentPosition">
+            <summary>
+            current Position of download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.FilePart.Range">
+            <summary>
+            File ID
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.FilePart.StartPosition">
+            <summary>
+            The position of the begging of the Part in the File
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.FilePart.EndPosition">
+            <summary>
+            current endPosition of download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.FilePart.CurrentPosition">
+            <summary>
+            current Position of download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.File_Part.FilePart.Progress">
+            <summary>
+            The Part Download Progress
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.File_Part.FilePart.AdjustCurrentPosition(System.String)">
+            <summary>
+            Adjust the Current Position of the part.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_State.ListFileState">
+            <summary>
+            Describes a List of Files to Download, it is a List of FileState
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.#ctor">
+            <summary>
+            Constructor of ListFileState
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.#ctor(ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination)">
+            <summary>
+            Constructor of ListFileState
+            </summary>
+            <param name="listFileDownloadInfo">ListFileDownloadInfo</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.ListFileState.items">
+            <summary>
+            List of FileState
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.ListFileState.CurrentID">
+            <summary>
+            Counter to set the ID for Files
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.ListFileState.defaultResponse">
+            <summary>
+            The default reponse if the file exists.
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.ListFileState.Items">
+            <summary>
+            List of FileState
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.ListFileState.Item(System.Int32)">
+            <summary>
+            Indexor of ListFileState
+            </summary>
+            <param name="i">Item Ranke</param>
+            <returns>FileState</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.AddFileState(System.String,System.String)">
+            <summary>
+            Add FileState to the list
+            </summary>
+            <param name="FileSource">The Source of File</param>
+            <param name="Destination">The File Destination (Root Directory or File Name)</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.GetNext(ZEMMOURI_Downloader.File_State.DownloadState)">
+            <summary>
+            Get the next file (with a specific State) to download
+            </summary>
+            <param name="downloadState">DownloadState</param>
+            <returns>FileState</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.GetNext">
+            <summary>
+            Get the next file to download
+            </summary>
+            <returns>FileState</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.FileExist(System.String)">
+            <summary>
+            Vérify if the file exists with the same name, and return a new name
+            </summary>
+            <param name="FileName">the File Name</param>
+            <returns>The new name</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.WriteToXML(ZEMMOURI_Downloader.File_State.ListFileState,System.String)">
+            <summary>
+            Export a List of FileState To an XML File
+            </summary>
+            <param name="list">List of FileState</param>
+            <param name="XMLFileName">The path of the Destination XML File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.ListFileState.ReadFromXML(System.String)">
+            <summary>
+            Import a List of FileState from an XML File
+            </summary>
+            <param name="XMLFileName">The path of the XML File</param>
+            <returns>ListFileState</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_State.FileState">
+            <summary>
+            Describes The File to Download by :
+            - ID
+            - Name
+            - Source
+            - Destination
+            - Download State (ready, Downloading, Ok, Error, Stoped, Aborted)
+            - Size
+            - Recieved Data
+            - Progress
+            - Start Time
+            - Elapsed Time
+            - Finish Time
+            - The number of Tries
+            - The Parts of the File
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.FileState.#ctor">
+            <summary>
+            Constructor of FileState
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.FileState.#ctor(System.UInt32,System.String,System.String)">
+            <summary>
+            Constructor of FileState
+            </summary>
+            <param name="ID">The ID of File</param>
+            <param name="FileSource">The Source of File</param>
+            <param name="Destination">The File Destination (Root Directory or File Name)</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.iD">
+            <summary>
+            File ID
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.state">
+            <summary>
+            Download State (ready, Downloading, Ok, Error, Stoped)
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.size">
+            <summary>
+            File's Size
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.recievedData">
+            <summary>
+            Recieved Data
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.progress">
+            <summary>
+            Download Progress
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.startTime">
+            <summary>
+            Time of Start Download
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.elapsedTime">
+            <summary>
+            Elapsed Time in Dowloading
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.finishTime">
+            <summary>
+            Time of Finish Download
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.nbTries">
+            <summary>
+            The number of Tries
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_State.FileState.parts">
+            <summary>
+            List of Parts
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.ID">
+            <summary>
+            File ID
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.State">
+            <summary>
+            Download State (ready, Downloading, Ok, Error, Aborted, Stoped)
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.Size">
+            <summary>
+            File's Size
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.RecievedData">
+            <summary>
+            Recieved Data
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.Progress">
+            <summary>
+            Download Progress
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.StartTime">
+            <summary>
+            Time of Start Download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.ElapsedTime">
+            <summary>
+            Elapsed Time in Dowloading
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.FinishTime">
+            <summary>
+            Time of Finish Download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.NbTries">
+            <summary>
+            The number of Triesime
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_State.FileState.Parts">
+            <summary>
+            List of Parts
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.FileState.Fragment">
+            <summary>
+            Fragments the File in Parts.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.FileState.Prepare">
+            <summary>
+            Prepars the download of the file.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_State.FileState.Collect">
+            <summary>
+            Collect the Parts and Build the file.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.ExpressionDownload">
+            <summary>
+            Expression to Download 
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.#ctor">
+            <summary>
+            The Constructor of ExpressionDownload
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.#ctor(System.String,System.String,System.Collections.Generic.List{ZEMMOURI_Downloader.Variables.Variable})">
+            <summary>
+            Constructor of ExpressionDownload
+            </summary>
+            <param name="SourceExpression">Source Expression Value to Download</param>
+            <param name="DestinationExpression">Destination Expression Directory</param>
+            <param name="ListVariables">List of Var’s</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ExpressionDownload.source">
+            <summary>
+            The Source's Expression to Download
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ExpressionDownload.destination">
+            <summary>
+            Destination Directory
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ExpressionDownload.listVariables">
+            <summary>
+            List of  Var’s proprieties
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.ExpressionDownload.Source">
+            <summary>
+            Get Or Set The Source's Expression to Download
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.ExpressionDownload.Destination">
+            <summary>
+            Get Or Set Destination Directory
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.ExpressionDownload.ListVariables">
+            <summary>
+            Get Or Set List of  Var’s proprieties
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.Evaluate">
+            <summary>
+            Evaluate the Expression
+            </summary>
+            <returns>a List of FileSourceDestination </returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.AddVar(ZEMMOURI_Downloader.Variables.Variable)">
+            <summary>
+            Add A variable to the list
+            </summary>
+            <param name="var">a Variable</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.RemoveVar(ZEMMOURI_Downloader.Variables.Variable)">
+            <summary>
+            Remove A variable from the list
+            </summary>
+            <param name="var">a Variable</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.WriteToXML(ZEMMOURI_Downloader.ExpressionDownload,System.String)">
+            <summary>
+            Export a descriptiont To an XML File
+            </summary>
+            <param name="description">Classe Description</param>
+            <param name="XMLFileName">The path of the Destination XML File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ExpressionDownload.ReadFromXML(System.String)">
+            <summary>
+            Import a descriptiont from an XML File
+            </summary>
+            <param name="XMLFileName">The path of the XML File</param>
+            <returns>ExpressionDownload</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.FormAbout">
+            <summary>
+            The About Form
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormAbout.#ctor">
+            <summary>
+            the About Form
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.FormAbout.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormAbout.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormAbout.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Duration">
+            <summary>
+            This Classe Describes The Duration
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Duration.#ctor">
+            <summary>
+            Constructor of Duration
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Duration.#ctor(System.Int32,ZEMMOURI_Downloader.Variables.DurationType)">
+            <summary>
+            Constructor of Duration
+            </summary>
+            <param name="DurationValue">The value of the Duration</param>
+            <param name="DurationUnit">The Type of the Duration</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Duration.value">
+            <summary>
+            The value of the Duration
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Duration.type">
+            <summary>
+            The Type of the Duration
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Duration.Value">
+            <summary>
+            The value of the Duration
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Duration.Type">
+            <summary>
+            The Type of the Duration
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Duration.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Duration.GetDuration">
+            <summary>
+            Get the Duration in TimeSpan
+            </summary>
+            <returns>a TimeSpan value</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.DurationType">
+            <summary>
+            Duration Units
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Year">
+            <summary>
+            Duration by Years
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Month">
+            <summary>
+            Duration by Months
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Day">
+            <summary>
+            Duration by Days
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Hour">
+            <summary>
+            Duration by Hours
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Minute">
+            <summary>
+            Duration by Minutes
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.DurationType.Second">
+            <summary>
+            Duration by Seconds
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Variable_Collection">
+            <summary>
+            This Classe Describes The Collection Vars
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Collection.#ctor">
+            <summary>
+            The Constructor of VarCollection
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Collection.#ctor(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            The Constructor of VarCollection
+            </summary>
+            <param name="VarSymbol">The Symbol how represents the Var</param>
+            <param name="ListWords">The of List Words</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Collection.words">
+            <summary>
+            The of List Words
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Collection.Words">
+            <summary>
+            Get Or Set The of List Words
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Collection.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Collection.Evaluate(ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination)">
+            <summary>
+            Evaluate a FileSourceDestination that contient a variable
+            </summary>
+            <param name="Expression">Expression FileSourceDestination to evaluate</param>
+            <returns>a List of FileSourceDestination </returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Variable_Date">
+            <summary>
+            This Classe Describes The Date Vars 
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Date.#ctor">
+            <summary>
+            The Constructor of DateVar
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Date.#ctor(System.String,System.DateTime,System.DateTime,ZEMMOURI_Downloader.Variables.Duration,System.String)">
+            <summary>
+            The Constructor of DateVar
+            </summary>
+            <param name="VarSymbol">The Symbol how represents the Var</param>
+            <param name="FirstValue">The First Value</param>
+            <param name="LastValue">The Last Value</param>
+            <param name="StepValue">The Step Value</param>
+            <param name="FormatValue">The Format of the Date</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Date.#ctor(System.String,System.DateTime,System.DateTime,System.Int32,ZEMMOURI_Downloader.Variables.DurationType,System.String)">
+            <summary>
+            The Constructor of DateVar
+            </summary>
+            <param name="VarSymbol">The Symbol how represents the Var</param>
+            <param name="FirstValue">The First Value</param>
+            <param name="LastValue">The Last Value</param>
+            <param name="StepValue">The Step Value</param>
+            <param name="StepType">The Step Type</param>
+            <param name="FormatValue">The Format of date</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Date.first">
+            <summary>
+            The First Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Date.last">
+            <summary>
+            The Last Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Date.step">
+            <summary>
+            The Step Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Date.format">
+            <summary>
+            The Format Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Date.First">
+            <summary>
+            Get Or Set The First Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Date.Last">
+            <summary>
+            Get Or Set The Last Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Date.Step">
+            <summary>
+            Get Or Set The Step Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Date.Format">
+            <summary>
+            Get Or Set The Step Value
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Date.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Date.Evaluate(ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination)">
+            <summary>
+            Evaluate a FileSourceDestination that contient a variable
+            </summary>
+            <param name="Expression">Expression FileSourceDestination to evaluate</param>
+            <returns>a List of FileSourceDestination </returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Variable_Letter">
+            <summary>
+            This Classe Describes The Letter Vars 
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.#ctor">
+            <summary>
+            The Constructor of LetterVar
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.#ctor(System.String,System.Char,System.Char,System.Int32)">
+            <summary>
+            The Constructor of LetterVar
+            </summary>
+            <param name="VarSymbol">The Symbol how represents the Var</param>
+            <param name="FirstValue">The First Value</param>
+            <param name="LastValue">The Last Value</param>
+            <param name="StepValue">The Step Value</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Letter.first">
+            <summary>
+            The First Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Letter.last">
+            <summary>
+            The Last Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Letter.step">
+            <summary>
+            The Step Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Letter.First">
+            <summary>
+            Get Or Set The First Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Letter.Last">
+            <summary>
+            Get Or Set The Last Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Letter.Step">
+            <summary>
+            Get Or Set The Step Value
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.GetIndex(System.Char)">
+            <summary>
+            get the index of the char in our list letters
+            </summary>
+            <param name="c">A char</param>
+            <returns>index of the char</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.GetChar(System.Int32)">
+            <summary>
+            Get a char from a list of letters
+            </summary>
+            <param name="index">the index of char</param>
+            <returns>a Char</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Letter.Evaluate(ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination)">
+            <summary>
+            Evaluate a FileSourceDestination that contient a variable
+            </summary>
+            <param name="Expression">Expression FileSourceDestination to evaluate</param>
+            <returns>a List of FileSourceDestination </returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Variable_Number">
+            <summary>
+            This Classe Describes The Number Vars 
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Number.#ctor">
+            <summary>
+            Constructor of NumberVar
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Number.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor of NumberVar
+            </summary>
+            <param name="VarSymbol">The Symbol how represents the Var</param>
+            <param name="FirstValue">The First Value</param>
+            <param name="LastValue">The Last Value</param>
+            <param name="StepValue">The Step Value</param>
+            <param name="addZerosValue">Add Zeros or not</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Number.first">
+            <summary>
+            The First Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Number.last">
+            <summary>
+            The Last Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Number.step">
+            <summary>
+            The Step Value
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable_Number.addZeros">
+            <summary>
+            Add Zeros or not
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Number.First">
+            <summary>
+            Get Or Set The First Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Number.Last">
+            <summary>
+            Get Or Set The Last Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Number.Step">
+            <summary>
+            Get Or Set The Step Value
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable_Number.AddZeros">
+            <summary>
+            Get Or Set Add Zeros or not
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Number.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable_Number.Evaluate(ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination)">
+            <summary>
+            Evaluate a FileSourceDestination that contient a variable
+            </summary>
+            <param name="Expression">Expression FileSourceDestination to evaluate</param>
+            <returns>a List of FileSourceDestination </returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.Variable">
+            <summary>
+            This Classe Describes The Vars
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.#ctor">
+            <summary>
+            Constructor of Var
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.#ctor(ZEMMOURI_Downloader.Variables.VariableType)">
+            <summary>
+            Constructor of Var
+            </summary>
+            <param name="TypeVar">The Type of the Variable</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.#ctor(System.String,ZEMMOURI_Downloader.Variables.VariableType)">
+            <summary>
+            Constructor of Var
+            </summary>
+            <param name="SymbolVar">The Symbol how represents the Var</param>
+            <param name="TypeVar">The Type of the Variable</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable.symbol">
+            <summary>
+            The Symbol how represents the Var
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.Variable.type">
+            <summary>
+            The Type of the Variable
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable.Symbol">
+            <summary>
+            The Symbol how represents the Var
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable.Type">
+            <summary>
+            The Type of the Variable
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Variables.Variable.VarToString">
+            <summary>
+            String representation of the var
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.ToString">
+            <summary>
+            Return the string representation of the var.
+            </summary>
+            <returns>string representation of the var</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.Evaluate(ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination)">
+            <summary>
+            Evaluate a string that contient a variable
+            </summary>
+            <param name="Expression">string to evaluate</param>
+            <returns>a List of string </returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Variables.Variable.Evaluate(System.Collections.Generic.List{ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination})">
+            <summary>
+            Evaluate a list of string that contient a variable
+            </summary>
+            <param name="ListExpressions">The List of string to evaluate</param>
+            <returns>a List of string </returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Variables.VariableType">
+            <summary>
+            Variable Type
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.VariableType.Number">
+            <summary>
+            A Number Variable
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.VariableType.Letter">
+            <summary>
+            A Letter Variable
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.VariableType.Date">
+            <summary>
+            A Date Variable
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Variables.VariableType.Collection">
+            <summary>
+            A List of Words
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination">
+            <summary>
+            Describes a List of Files to Download, it is a List of FileDownloadInfo
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.#ctor">
+            <summary>
+            Constructor of ListFileDownloadInfo
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.#ctor(ZEMMOURI_Downloader.ExpressionDownload)">
+            <summary>
+            Constructor of ListFileDownloadInfo
+            </summary>
+            <param name="Expression">Expression to Download</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.items">
+            <summary>
+            List of FileDownloadInfo
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.Items">
+            <summary>
+            List of FileDownloadInfo
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.Item(System.Int32)">
+            <summary>
+            Indexor of ListFileDownloadInfo
+            </summary>
+            <param name="i">Item Ranke</param>
+            <returns>FileDownloadInfo</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.WriteToXML(ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination,System.String)">
+            <summary>
+            Export a List of FileDownloadInfo To an XML File
+            </summary>
+            <param name="list">List of FileDownloadInfo</param>
+            <param name="XMLFileName">The path of the Destination XML File</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination.ReadFromXML(System.String)">
+            <summary>
+            Import a List of FileDownloadInfo from an XML File
+            </summary>
+            <param name="XMLFileName">The path of the XML File</param>
+            <returns>ListFileDownloadInfo</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination">
+            <summary>
+            Describes a File to Download by :    
+             - Name     
+             - Url Source 
+             - Destination    
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.#ctor">
+            <summary>
+            Constructor of FileDownloadInfo
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.#ctor(System.String,System.String)">
+            <summary>
+            Constructor of FileDownloadInfo
+            </summary>
+            <param name="FileSource">The Source of File</param>
+            <param name="Destination">The File Destination (Root Directory or File Name)</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.name">
+            <summary>
+            The File's Name
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.source">
+            <summary>
+            The File URL Source
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.destination">
+            <summary>
+            The File's Destination
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.Name">
+            <summary>
+            The File's Name
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.Source">
+            <summary>
+            The File URL Source
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.Destination">
+            <summary>
+            The File's Destination
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.getFileName(System.String)">
+            <summary>
+            Get the absolute Name of a File
+            </summary>
+            <param name="fullPath">The Full path of a File</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.SymbolExist(System.String)">
+            <summary>
+            Determines whether the Symbol exists in the FileSourceDestination
+            </summary>
+            <param name="Symbol">The Symbol to chek</param>
+            <returns>Bool</returns>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.File_SourceDestination.FileSourceDestination.SymbolReplace(System.String,System.String)">
+            <summary>
+            Replaces all occurrences of a Symbol String in this instance, with another String.
+            </summary>
+            <param name="Symbol">The Symbol to be replaced.</param>
+            <param name="Value">A String to replace all occurrences of Symbol.</param>
+            <returns>A FileSourceDestination equivalent to this instance but with all instances of Symbol replaced with Value.</returns>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.FormFileExists">
+            <summary>
+            ToDoc : FormFileExists
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.FormFileExists.FileName">
+            <summary>
+            ToDoc : FileName
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.FormFileExists.response">
+            <summary>
+            ToDoc : response
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormFileExists.#ctor(System.String)">
+            <summary>
+            ToDoc : FormFileExists(string fileName)
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.FormFileExists.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormFileExists.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormFileExists.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Response">
+            <summary>
+            ToDoc : Response
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Response.None">
+            <summary>
+            ToDoc : None
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Response.Overwrite">
+            <summary>
+            ToDoc : Overwrite
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Response.AutoRename">
+            <summary>
+            ToDoc : Auto Rename
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Response.SaveAs">
+            <summary>
+            ToDoc : SaveAs
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Response.Cancel">
+            <summary>
+            ToDoc : Cancel
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.FormMain">
+            <summary>
+            ToDoc : FormMain
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormMain.#ctor">
+            <summary>
+            The Main Form
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.FormMain.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormMain.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.FormMain.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.ListDownloads">
+            <summary>
+            ToDoc : ListDownloads
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.#ctor(ZEMMOURI_Downloader.File_SourceDestination.ListFileSourceDestination)">
+            <summary>
+            ListDownloads Component
+            </summary>
+            <param name="listFileDownloadInfo">A List of FileSourceDestination</param>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ListDownloads.ListFiles">
+            <summary>
+            List of Files State.
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ListDownloads.ListDownloaders">
+            <summary>
+            List of Downloaders
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.AddRow(ZEMMOURI_Downloader.File_State.FileState)">
+            <summary>
+            Add Row to the Table
+            </summary>
+            <param name="fileState">FileState</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.BindingRow(ZEMMOURI_Downloader.File_State.FileState)">
+            <summary>
+            Modify the content of a Row
+            </summary>
+            <param name="fileState">FileState</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.AddRows">
+            <summary>
+            Add Rows to the table
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.BindingRows">
+            <summary>
+            Modify the content of the table
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.ListDownloads.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.ListDownloads.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Program.Letters">
+            <summary>
+            Letters
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Program.DefaultMaxDownloads">
+            <summary>
+            The Max Number of Simetaneouse downloads
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Program.MaxTries">
+            <summary>
+            The Max Number of downloads tries
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Program.TemporaryExtension">
+            <summary>
+            Temporary Extension of the downloading files
+            </summary>
+        </member>
+        <member name="F:ZEMMOURI_Downloader.Program.DeleteTemporaryFiles">
+            <summary>
+            Delete the temporaries files or not, in Case of failure
+            </summary>
+        </member>
+        <member name="M:ZEMMOURI_Downloader.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:ZEMMOURI_Downloader.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZEMMOURI_Downloader.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
